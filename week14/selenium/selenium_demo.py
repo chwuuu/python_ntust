@@ -21,10 +21,10 @@ search_box.send_keys(Keys.RETURN)
 time.sleep(2)
 
 # 找到所有的搜尋結果標題，並印出
-results = driver.find_elements(By.CSS_SELECTOR, 'div#yuRUbf>a>h3')
+results = driver.find_elements(By.CSS_SELECTOR, 'h3')
 #results = driver.find_elements(By.XPATH, '//div[@class="yuRUbf"]/a/h3')
 for result in results:
     print(result.text)
 
 # 用完記得要關閉瀏覽器喔
-#driver.quit()
+driver.quit()
